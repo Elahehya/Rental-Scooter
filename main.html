@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Scooter Security Handbook</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			}
+
+		body {
+			font-family: 'Inter', sans-serif;
+			background-color: #ffffff;
+			color: #333;
+			line-height: 1.6;
+			}
+
+		/* Hero Section */
+		.hero {
+			background-color: #0f0f0f; /* Dark background from image */
+			color: white;
+			padding: 20px 10%;
+			text-align: center;
+			padding-bottom: 80px;
+			}
+
+		/* Navbar */
+		.navbar {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 80px;
+			}
+
+		.logo {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			}
+
+		.logo-box {
+			background-color: #ff6b00;
+			padding: 5px 8px;
+			border-radius: 4px;
+			font-weight: bold;
+			font-size: 0.8rem;
+			}
+
+		.nav-links {
+			display: flex;
+			list-style: none;
+			gap: 30px;
+			}
+
+		.nav-links a {
+			color: #ccc;
+			text-decoration: none;
+			font-size: 0.9rem;
+			}
+
+		.nav-links a.active {
+			color: #ff6b00;
+			}
+
+		/* Hero Content */
+		.hero-content h1 {
+			font-size: 2.8rem;
+			margin-bottom: 20px;
+			font-weight: 700;
+			}
+		.hero-content p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #aaa;
+    font-size: 1.1rem;
+}
+
+/* Cards Section */
+.container {
+    max-width: 1100px;
+    margin: -40px auto 50px; /* Pulls cards up into the hero slightly if desired */
+    padding: 0 20px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #eef0f2;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-box {
+    background-color: #ff6b00;
+    color: white;
+    min-width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+}
+
+.card-text h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+
+.card-text p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+    .nav-links {
+        display: none; /* Hide nav on small screens for simplicity */
+    }
+}
+/* Stats Section Styling */
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 80px 10%;
+    background-color: #fcfcfc; /* Very light gray background */
+    border-top: 1px solid #eee;
+}
+
+.stat-item {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.stat-number {
+    color: #ff6b00; /* Matching the orange from the logo */
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.stat-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.stat-desc {
+    color: #777;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Footer Styling */
+.main-footer {
+    background-color: #f8f9fa;
+    padding: 60px 10% 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h4 {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #334155;
+}
+
+.footer-col p, .footer-col li {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.footer-col a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-col a:hover {
+    color: #ff6b00;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 20px;
+    color: #94a3b8;
+    font-size: 0.8rem;
+}
+
+/* Mobile responsive for footer */
+@media (max-width: 768px) {
+    .stats-section, .footer-grid {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+
+	</style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-box">ES</span>
+                <strong>E-Scooter Security</strong>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Security Policies</a></li>
+                <li><a href="#">Incident Reporting</a></li>
+                <li><a href="#">Security Training</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-content">
+            <h1>Company Security Handbook</h1>
+            <p>Welcome to the E-Scooter Company Security Handbook. This resource provides all employees with essential security policies, guidelines, and best practices to protect our company, customers, and data. Please familiarize yourself with these policies and refer back as needed.</p>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="card-grid">
+            <div class="card">
+                <div class="icon-box orange">🛡️</div>
+                <div class="card-text">
+                    <h3>Customer Data Protection</h3>
+                    <p>Learn how to handle and protect customer personal information and payment data securely.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon-box orange">🔒</div>
+                <div class="card-text">
+                    <h3>Access Control & Permissions</h3>
+                    <p>Understand role-based access controls and permission management for internal systems.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon-box orange">📱</div>
+                <div class="card-text">
+                    <h3>Device Security</h3>
+                    <p>Best practices for securing company devices, mobile phones, and work equipment.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon-box orange">⚠️</div>
+                <div class="card-text">
+                    <h3>Incident Reporting</h3>
+                    <p>Report security incidents, suspicious activities, or potential data breaches immediately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+	<section class="stats-section">
+    <div class="stat-item">
+        <h2 class="stat-number">24/7</h2>
+        <p class="stat-title">Security Support</p>
+        <p class="stat-desc">Our security team is available around the clock for urgent matters</p>
+    </div>
+    <div class="stat-item">
+        <h2 class="stat-number">100%</h2>
+        <p class="stat-title">Compliance</p>
+        <p class="stat-desc">We maintain full compliance with data protection regulations</p>
+    </div>
+    <div class="stat-item">
+        <h2 class="stat-number">Secure</h2>
+        <p class="stat-title">Data Protection</p>
+        <p class="stat-desc">Industry-leading security measures protect customer and company data</p>
+    </div>
+</section>
+
+<footer class="main-footer">
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h4>Contact Information</h4>
+            <p>✉️ security@escooter.com</p>
+            <p>📞 +1 (555) 123-4567</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Internal Support Portal</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Security Resources</h4>
+            <p>For urgent security matters, contact the security team immediately at ext. 911</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 E-Scooter Company. Internal Use Only - Confidential</p>
+    </div>
+</footer>
+
+</body>
+</html>
